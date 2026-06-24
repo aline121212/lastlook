@@ -1,0 +1,492 @@
+:root {
+
+    --color-bg-primary: #0a2342;
+    --color-bg-secondary: #1a3a52;
+    --color-bg-tertiary: rgba(20, 45, 70, 0.95);
+    --color-text-primary: #ffffff;
+    --color-text-secondary: rgba(255, 255, 255, 0.85);
+    --color-text-muted: rgba(255, 255, 255, 0.65);
+    --color-text-light: rgba(255, 255, 255, 0.50);
+    --color-border: rgba(100, 140, 180, 0.2);
+    --color-border-light: rgba(100, 140, 180, 0.15);
+    --color-border-medium: rgba(100, 140, 180, 0.3);
+    --color-border-strong: rgba(100, 140, 180, 0.4);
+    --color-accent: rgba(100, 140, 180, 0.3);
+    --color-accent-hover: rgba(100, 140, 180, 0.5);
+    --color-bg-overlay: rgba(255, 255, 255, 0.1);
+    --color-bg-overlay-hover: rgba(255, 255, 255, 0.15);
+    --color-card-bg: linear-gradient(135deg, rgba(50, 90, 130, 0.6) 0%, rgba(30, 70, 105, 0.6) 100%);
+    --color-card-bg-hover: linear-gradient(135deg, rgba(50, 90, 130, 0.8) 0%, rgba(30, 70, 105, 0.8) 100%);
+
+    --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    --font-size-xs: 12px;
+    --font-size-sm: 13px;
+    --font-size-base: 15px;
+    --font-size-lg: 16px;
+    --font-size-xl: 52px;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /* Spacing */
+    --spacing-xs: 6px;
+    --spacing-sm: 8px;
+    --spacing-md: 12px;
+    --spacing-lg: 16px;
+    --spacing-xl: 24px;
+    --spacing-2xl: 28px;
+    --spacing-3xl: 32px;
+    --spacing-4xl: 40px;
+    --spacing-5xl: 60px;
+    --spacing-6xl: 80px;
+
+    /* Border Radius */
+    --border-radius-sm: 4px;
+    --border-radius-md: 6px;
+    --border-radius-lg: 10px;
+    --border-radius-full: 50%;
+
+    /* Borders */
+    --border-width-thin: 1px;
+    --border-width-medium: 1.5px;
+
+    /* Transitions */
+    --transition-fast: 0.3s ease;
+    --transition-smooth: all 0.3s ease;
+
+    /* Backdrop Filter */
+    --backdrop-filter: blur(8px);
+
+    --aura-color-1: rgba(66, 210, 246, 0.281);
+    /* Cyan */
+    --aura-color-2: rgba(109, 95, 52, 0.568);
+    /* Gold */
+    --aura-color-3: rgba(156, 39, 176, 0.3);
+    /* Violet */
+}
+
+/* ============================================
+   RESET & BASE STYLES
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background: linear-gradient(135deg, var(--color-bg-primary) 0%, var(--color-bg-secondary) 100%);
+    color: var(--color-text-primary);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ============================================
+   NAVBAR BLOCK
+   ============================================ */
+.navbar {
+    background-color: var(--color-bg-tertiary);
+    padding: var(--spacing-2xl) var(--spacing-4xl);
+    border-bottom: var(--border-width-thin) solid var(--color-border-light);
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    /* This pushes everything to the right side of the navbar */
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+/* Navbar Left Section */
+.navbar__left {
+    display: flex;
+    gap: 20px;
+    /* Remove any margin-right: auto if you have it */
+}
+
+
+.navbar__item {
+    cursor: pointer;
+    transition: opacity var(--transition-fast);
+    font-weight: var(--font-weight-regular);
+    font-size: 16px;
+    color: white;
+}
+
+.navbar__item:hover {
+    opacity: 0.6;
+}
+
+/* Navbar Right Section */
+.navbar__right {
+    display: flex;
+    gap: var(--spacing-lg);
+    align-items: center;
+}
+
+/* Search Container */
+.navbar__search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #262626;
+    border-radius: 14px;
+    padding: 10px 20px;
+    gap: var(--spacing-sm);
+}
+
+.navbar__search-input {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: var(--font-size-xs);
+    width: 120px;
+    outline: none;
+}
+
+.navbar__search-input::placeholder {
+    color: white;
+    font-size: 13px;
+}
+
+.navbar__search-icon {
+    font-size: 14px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+/* Icon Button */
+.navbar__icon-btn {
+    background: var(--color-bg-overlay);
+    border: var(--border-width-thin) solid var(--color-border);
+    color: var(--color-text-primary);
+    width: 28px;
+    height: 28px;
+    border-radius: var(--border-radius-full);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    transition: var(--transition-smooth);
+}
+
+.navbar__icon-btn:hover {
+    background: var(--color-bg-overlay-hover);
+}
+
+/* Navbar Buttons */
+.navbar__btn {
+    padding: 8px 25px;
+    border-radius: var(--border-radius-sm);
+    font-size: 15px;
+    font-weight: var(--font-weight-medium);
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    border: none;
+    color: var(--color-text-primary);
+}
+
+.navbar__btn--sign-in {
+    background: white;
+    color: #1E1E1E;
+    border: none;
+    border-radius: 5px;
+}
+
+
+.navbar__btn--register {
+    background-color: #2C2C2C;
+    border: none;
+
+    border-radius: 5px;
+
+}
+
+.navbar__btn--sign-in:hover {
+
+    background-color: rgba(255, 255, 255, 0.733);
+}
+
+.navbar__btn--register:hover {
+    background-color: rgba(0, 0, 0, 0.541);
+}
+
+/* ============================================
+   HERO/CONTAINER BLOCK
+   ============================================ */
+
+/* ============================================
+   AURA (AETHER) SYSTEM
+   ============================================ */
+
+/* 1. The Container: Positions the entire system in the middle-top */
+.hero__aether {
+    position: absolute;
+    top: 10vh;
+    /* Adjusted for navbar */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 80vh;
+    /* Covers main hero text and card top */
+    z-index: 0;
+    /* Behind everything */
+    overflow: hidden;
+}
+
+/* 2. The Universal Filter: Blurs everything *inside* the .hero__aether */
+.hero__aether::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(80px);
+    /* The Diffuser */
+    z-index: 2;
+    /* Layer above the individual balls, below foreground */
+}
+
+/* 3. The Balls (Shared styles) */
+.aura-ball {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(20px);
+    /* Small pre-blur helps */
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    z-index: 1;
+    /* Layer below the main backdrop filter */
+}
+
+/* 4. Defining Individual Balls & Unique Animations */
+
+/* Cyan: Starts left, moves slowly */
+.aura-ball--1 {
+    width: 600px;
+    height: 680px;
+    background-color: var(--aura-color-1);
+    top: -10%;
+    left: -3%;
+    animation-name: auraShift1;
+    animation-duration: 25s;
+}
+
+/* Gold: Middle-right, floats slightly up/down */
+.aura-ball--2 {
+    width: 880px;
+    height: 800px;
+    background-color: var(--aura-color-2);
+    top: -10%;
+    right: -5%;
+    animation-name: auraShift2;
+    animation-duration: 35s;
+    /* Offset startup */
+}
+
+/* Violet: Lowest, deep shift */
+.aura-ball--3 {
+    width: 100px;
+    height: 100px;
+    background-color: var(--aura-color-3);
+    bottom: -20%;
+    left: 30%;
+    animation-name: auraShift3;
+    animation-duration: 30s;
+    animation-delay: -10s;
+}
+
+/* ============================================
+   Updated Existing Elements for Layering
+   ============================================ */
+.navbar {
+    /* Ensure nav is sharp and on top */
+    position: relative;
+    z-index: 100;
+    background: none;
+    /* Let background show through if transparent */
+}
+
+.container {
+    /* Main hero content must be on top */
+    position: relative;
+    z-index: 10;
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 40px;
+}
+
+/* All FOREGROUND elements must be forced to a high Z-Index */
+.hero__title,
+.hero__subtitle,
+.cards-grid {
+    position: relative;
+    z-index: 11;
+    /* Ensure they stay perfectly sharp */
+}
+
+.hero {
+    position: relative;
+    z-index: 11;
+    text-align: left;
+    padding: 80px 40px 510px 140px;
+}
+
+/* Add slight visibility adjustment to text if aura is strong */
+.hero__title {
+    padding: 70px;
+    padding-bottom: 6px;
+    font-size: 64px;
+    margin-bottom: 20px;
+    letter-spacing: -2px;
+    line-height: 40px;
+    align-self: stretch;
+
+}
+
+.card {
+    /* ... Your existing cards ... */
+    position: relative;
+    z-index: 12;
+}
+
+.hero__title {
+    padding: 200px 0 10px 90px;
+    font-size: 100px;
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-sm);
+    text-align: left;
+    letter-spacing: -0.5px;
+}
+
+.hero__subtitle {
+
+    padding: 20px 0 40px 96px;
+    font-size: 18px;
+    color: white;
+    margin-bottom: var(--spacing-5xl);
+    text-align: left;
+
+}
+
+/* ============================================
+   AURA ANIMATIONS (Keyframes)
+   Using translate and scale for soft movement
+   ============================================ */
+
+/* Slow horizontal float + scaling */
+@keyframes auraShift1 {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: translate(150px, 30px) scale(1.1);
+        opacity: 0.9;
+    }
+}
+
+/* Vertical float + slow rotate (rotation doesn't show much, but helps blend) */
+@keyframes auraShift2 {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: translate(-40px, -120px) scale(1.05);
+        opacity: 1;
+    }
+}
+
+/* Subtle, complex pulse/drift */
+@keyframes auraShift3 {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.5;
+    }
+
+    33% {
+        transform: translate(50px, -50px) scale(0.95);
+        opacity: 0.7;
+    }
+
+    66% {
+        transform: translate(-50px, 50px) scale(1.0);
+        opacity: 0.8;
+    }
+}
+
+
+/* ============================================
+   CARDS GRID BLOCK
+   ============================================ */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-2xl);
+}
+
+/* Card Element */
+.card {
+    background: var(--color-card-bg);
+    border: var(--border-width-medium) solid var(--color-border-strong);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-2xl) var(--spacing-lg);
+    transition: var(--transition-smooth);
+    cursor: pointer;
+    backdrop-filter: var(--backdrop-filter);
+}
+
+.card:hover {
+    background: var(--color-card-bg-hover);
+    border-color: var(--color-accent-hover);
+    transform: translateY(-2px);
+}
+
+.card__title {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: var(--spacing-sm);
+}
+
+.card__description {
+    font-size: var(--font-size-sm);
+    color: rgba(255, 255, 255, 0.70);
+    line-height: 1.6;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 768px) {
+    .container {
+        padding: var(--spacing-5xl) var(--spacing-md);
+    }
+
+    .hero__title {
+        font-size: 36px;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar__menu {
+        gap: var(--spacing-lg);
+    }
+
+    .navbar {
+        padding: var(--spacing-md) var(--spacing-lg);
+    }
+}
