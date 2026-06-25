@@ -58,7 +58,7 @@
                                 <!-- Right Panel: Navigation Columns -->
                                 <div class="dropdown__right">
                                     <div class="subnav-column">
-                                        <span class="subnav-label">Watchlist</span>
+                                        <span class="subnav-label">Watch</span>
                                         <div class="subnav">
                                             <a href="#" class="subnav-link">
                                                 <span class="link-title">Movies</span>
@@ -76,7 +76,7 @@
                                     </div>
 
                                     <div class="subnav-column">
-                                        <span class="subnav-label">Readlist</span>
+                                        <span class="subnav-label">Reads</span>
                                         <div class="subnav">
                                             <a href="#" class="subnav-link">
 
@@ -128,11 +128,152 @@
 
         <div class="hero__actions">
             <a href="./register.html" class="hero__btn hero__btn--primary">Get Started</a>
-            <button class="hero__btn hero__btn--secondary">Explore</button>
+            <a href="./explore.html" class="hero__btn hero__btn--secondary">Explore</a>
         </div>
     </section>
 
-    <!-- Cards Layout Grid -->
+    <!-- Top Movies 2025 Carousel -->
+    <section class="carousel-section">
+        <h2 class="carousel-section__title">Featured Favorites All Around</h2>
+        <div class="movie-carousel">
+            <!-- Navigation Buttons -->
+            <button class="carousel-btn carousel-btn--prev" id="carouselPrev" aria-label="Previous Slide">
+                <span>◀</span>
+            </button>
+
+            <div class="movie-carousel__viewport">
+                <div class="movie-carousel__track" id="carouselTrack">
+                    <!-- Card 1 -->
+                    <div class="movie-card">
+                        <img src="./images/superman.png" alt="Superman" class="movie-card__image">
+                        <div class="movie-card__info">
+                            <span class="movie-card__badge">July 2025</span>
+                            <h3 class="movie-card__name">Superman</h3>
+                            <p class="movie-card__genre">Action / Sci-Fi</p>
+                        </div>
+                    </div>
+
+                    <div class="movie-card">
+                        <img src="./images/aot.png" alt="Attack on Titan" class="movie-card__image">
+                        <div class="movie-card__info">
+                            <span class="movie-card__badge">March 2023</span>
+                            <h3 class="movie-card__name">Attack on Titan</h3>
+                            <p class="movie-card__genre">Action / Drama</p>
+                        </div>
+                    </div>
+
+
+                    <!-- Card 2 -->
+                    <div class="movie-card">
+                        <img src="./images/onebattle.png" alt="One battle after another" class="movie-card__image">
+                        <div class="movie-card__info">
+                            <span class="movie-card__badge">Sept 2025</span>
+                            <h3 class="movie-card__name">One Battle After Another</h3>
+                            <p class="movie-card__genre">Action / Thriller</p>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="movie-card">
+                        <img src="./images/jurasicworldr.png" alt="Jurassic World Rebirth" class="movie-card__image">
+                        <div class="movie-card__info">
+                            <span class="movie-card__badge">July 2025</span>
+                            <h3 class="movie-card__name">Jurassic World Rebirth</h3>
+                            <p class="movie-card__genre">Adventure / Action</p>
+                        </div>
+                    </div>
+
+                    <div class="movie-card">
+                        <img src="./images/litlewoman.png" alt="Little Woman" class="movie-card__image">
+                        <div class="movie-card__info">
+                            <span class="movie-card__badge">April 1869</span>
+                            <h3 class="movie-card__name">Little Woman</h3>
+                            <p class="movie-card__genre">Drama</p>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Card 4 -->
+                    <div class="movie-card">
+                        <img src="./images/f1movie.png" alt="F1" class="movie-card__image">
+                        <div class="movie-card__info">
+                            <span class="movie-card__badge">June 2025</span>
+                            <h3 class="movie-card__name">F1</h3>
+                            <p class="movie-card__genre">Drama / Sports</p>
+                        </div>
+                    </div>
+
+                    <!-- Duplicate Set for Seamless Infinite Scrolling -->
+                    <!-- Card 1 Duplicate -->
+                    <div class="movie-card">
+                        <img src="./images/projecth.png" alt="Project Hail Mary" class="movie-card__image">
+                        <div class="movie-card__info">
+                            <span class="movie-card__badge">March 2025</span>
+                            <h3 class="movie-card__name">Project Hail Mary</h3>
+                            <p class="movie-card__genre">Sci-Fi / Adventure</p>
+                        </div>
+                    </div>
+
+
+                    <div class="movie-card">
+                        <img src="./images/sinners.png" alt="Sinners" class="movie-card__image">
+                        <div class="movie-card__info">
+                            <span class="movie-card__badge">April 2025</span>
+                            <h3 class="movie-card__name">Sinners</h3>
+                            <p class="movie-card__genre">Drama / Horror</p>
+                        </div>
+                    </div>
+
+
+                    <div class="movie-card">
+                        <img src="./images/breakingbad.png" alt="Breaking Bad" class="movie-card__image">
+                        <div class="movie-card__info">
+                            <span class="movie-card__badge">Jan 2008</span>
+                            <h3 class="movie-card__name">Breaking Bad</h3>
+                            <p class="movie-card__genre">Drama / Crime</p>
+                        </div>
+                    </div>
+                    <!-- Card 3 Duplicate -->
+
+                    <!-- Card 4 Duplicate -->
+                    <div class="movie-card">
+                        <img src="./images/onepunch.png" alt="One Punch Man" class="movie-card__image">
+                        <div class="movie-card__info">
+                            <span class="movie-card__badge">July 2009</span>
+                            <h3 class="movie-card__name">One Punch Man</h3>
+                            <p class="movie-card__genre">Action / Comedy</p>
+                        </div>
+                    </div>
+
+                    <div class="movie-card">
+                        <img src="./images/houseofdragons.png" alt="House of Dragons" class="movie-card__image">
+                        <div class="movie-card__info">
+                            <span class="movie-card__badge">Aug 2022</span>
+                            <h3 class="movie-card__name">House of Dragons</h3>
+                            <p class="movie-card__genre">Drama / Fantasy</p>
+                        </div>
+                    </div>
+
+                                        <div class="movie-card">
+                        <img src="./images/kimetsunoyaiba.png" alt="Kimetsu no Yaiba" class="movie-card__image">
+                        <div class="movie-card__info">
+                            <span class="movie-card__badge">Sept 2025</span>
+                            <h3 class="movie-card__name">Kimetsu no Yaiba</h3>
+                            <p class="movie-card__genre">Action / Drama</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-btn carousel-btn--next" id="carouselNext" aria-label="Next Slide">
+                <span>▶</span>
+            </button>
+        </div>
+    </section>
+
+
+
+     <!-- Cards Layout Grid -->
     <section class="cards-section">
         <div class="cards-grid">
             <div class="card">

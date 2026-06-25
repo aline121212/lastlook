@@ -7,7 +7,7 @@
     --color-bg-secondary: #081125;
     --color-text-white: #f9fafb;
     --color-text-muted-white: #9ca3af;
-    
+
     /* Header & Navigation Colors (Dark Theme Glassmorphism) */
     --color-header-bg: rgba(3, 7, 18, 0.45);
     --color-header-bg-solid: rgba(8, 17, 37, 0.95);
@@ -17,17 +17,17 @@
     --color-blue-primary: rgba(59, 131, 246, 0.774);
     --color-blue-hover: rgb(219, 143, 28);
     --color-accent-purple: #a855f7;
-    
+
     /* Card Colors */
     --color-card-bg: rgba(255, 255, 255, 0.03);
     --color-card-border: rgba(255, 255, 255, 0.08);
     --color-card-bg-hover: rgba(255, 255, 255, 0.07);
     --color-card-border-hover: rgba(59, 130, 246, 0.4);
-    
+
     /* Typography */
     --font-primary: 'Outfit', 'Inter', sans-serif;
     --font-secondary: 'Inter', sans-serif;
-    
+
     /* Spacing System */
     --space-xs: 4px;
     --space-sm: 8px;
@@ -35,14 +35,14 @@
     --space-lg: 24px;
     --space-xl: 36px;
     --space-2xl: 48px;
-    
+
     /* Layout Configurations */
     --header-height: 70px;
     --border-radius-sm: 6px;
     --border-radius-md: 12px;
     --border-radius-lg: 16px;
     --border-radius-full: 9999px;
-    
+
     /* Transition Timings */
     --transition-fast: 0.15s ease;
     --transition-normal: 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -66,7 +66,7 @@
 body {
     background-color: var(--color-bg-primary);
     background-image: radial-gradient(at 0% 0%, rgba(13, 27, 56, 0.5) 0px, transparent 50%),
-                      radial-gradient(at 100% 100%, rgba(9, 18, 41, 0.5) 0px, transparent 50%);
+        radial-gradient(at 100% 100%, rgba(9, 18, 41, 0.5) 0px, transparent 50%);
     color: var(--color-text-white);
     font-family: var(--font-primary);
     min-height: 100vh;
@@ -280,7 +280,7 @@ button {
     z-index: 99;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    
+
     /* Animation Properties */
     opacity: 0;
     visibility: hidden;
@@ -511,18 +511,39 @@ button {
 }
 
 @keyframes auraShift1 {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    50% { transform: translate(80px, 60px) scale(1.15); }
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(80px, 60px) scale(1.15);
+    }
 }
 
 @keyframes auraShift2 {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    50% { transform: translate(-100px, -50px) scale(1.1); }
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(-100px, -50px) scale(1.1);
+    }
 }
 
 @keyframes auraShift3 {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    50% { transform: translate(60px, -80px) scale(1.2); }
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(60px, -80px) scale(1.2);
+    }
 }
 
 /* ==========================================================================
@@ -678,6 +699,12 @@ button {
     color: var(--color-text-white);
 }
 
+
+
+
+
+
+
 /* ==========================================================================
    FOOTER COMPONENT
    ========================================================================== */
@@ -714,6 +741,204 @@ button {
 }
 
 /* ==========================================================================
+   TOP MOVIES 2025 MARQUEE CAROUSEL
+   ========================================================================== */
+.carousel-section {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 100vw;
+    margin: 240px auto 140px auto;
+    overflow: hidden;
+}
+
+.carousel-section__title {
+    font-family: var(--font-primary);
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--color-text-white);
+    margin-bottom: var(--space-xl);
+    text-align: center;
+    background: linear-gradient(135deg, #ffffff 40%, #a5b4fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.movie-carousel {
+    width: 100%;
+    position: relative;
+    padding: 30px 0;
+}
+
+.movie-carousel__viewport {
+    width: 100%;
+    overflow: hidden;
+    /* Edge fade effect */
+    mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+}
+
+.movie-carousel__track {
+    display: flex;
+    gap: var(--space-xl);
+    width: max-content;
+    transition: transform 0.5s ease;
+
+}
+
+
+/* Navigation Buttons Styling */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: rgba(8, 17, 37, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--color-text-white);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    transition: all var(--transition-normal);
+}
+
+.carousel-btn:hover {
+    background: var(--color-blue-hover);
+    border-color: transparent;
+    color: var(--color-bg-primary);
+    box-shadow: 0 0 25px rgba(219, 143, 28, 0.5);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.carousel-btn--prev {
+    left: 40px;
+}
+
+.carousel-btn--next {
+    right: 40px;
+}
+
+/* Hide navigation buttons on mobile devices */
+@media (max-width: 768px) {
+    .carousel-btn {
+        display: none;
+    }
+}
+
+.movie-card {
+    position: relative;
+    width: 375px;
+    height: 550px;
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    background-color: var(--color-card-bg);
+    border: 1px solid var(--color-card-border);
+    cursor: pointer;
+    transition: transform var(--transition-normal),
+    border-color var(--transition-normal),
+    box-shadow var(--transition-normal);
+    user-select: none;
+}
+
+@media (min-width: 1400px) {
+    .movie-card {
+        width: 320px;
+        height: 480px;
+    }
+}
+
+@media (max-width: 900px) {
+    .movie-card {
+        width: 240px;
+        height: 360px;
+    }
+}
+
+@media (max-width: 600px) {
+    .movie-card {
+        width: 180px;
+        height: 270px;
+    }
+}
+
+.movie-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    border-color: rgb(80, 28, 80);
+    box-shadow: 0 15px 35px rgba(28, 127, 219, 0.486);
+}
+
+.movie-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-normal);
+}
+
+.movie-card:hover .movie-card__image {
+    transform: scale(1.06);
+}
+
+.movie-card__info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: var(--space-md);
+    background: linear-gradient(to top, rgba(3, 7, 18, 0.95) 0%, rgba(3, 7, 18, 0.6) 60%, transparent 100%);
+    color: var(--color-text-white);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    transform: translateY(0);
+    transition: transform var(--transition-normal);
+}
+
+.movie-card__badge {
+    align-self: flex-start;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: #5596f77a;
+    color: rgb(255, 255, 255);
+    padding: 2px 8px;
+    font-weight: 300;
+    border-radius: var(--border-radius-full);
+}
+
+.movie-card__name {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 2px 0;
+}
+
+.movie-card__genre {
+    font-size: 13px;
+    color: var(--color-text-muted-white);
+}
+
+@keyframes marquee-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* ==========================================================================
    RESPONSIVE DESIGN (MEDIA QUERIES)
    ========================================================================== */
 @media (max-width: 1024px) {
@@ -721,11 +946,12 @@ button {
         grid-template-columns: 1fr;
         gap: var(--space-lg);
     }
-    
+
     .dropdown__left {
-        display: none; /* Hide overview pitch in smaller viewports */
+        display: none;
+        /* Hide overview pitch in smaller viewports */
     }
-    
+
     .hero__title {
         font-size: 56px;
     }
@@ -733,24 +959,26 @@ button {
 
 @media (max-width: 768px) {
     .header__right .search-bar {
-        display: none; /* Hide search input on mobile for simplicity */
+        display: none;
+        /* Hide search input on mobile for simplicity */
     }
-    
+
     .hero {
         padding-top: 150px;
     }
-    
+
     .hero__title {
         font-size: 40px;
     }
-    
+
     .cards-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .footer__list {
         flex-direction: column;
         gap: var(--space-md);
         align-items: center;
     }
 }
+

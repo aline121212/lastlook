@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padlock - Explore</title>
+    <meta name="description" content="Explore Padlock's entertainment universe.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="explore.css">
+
+
+</head>
+
+<body>
+
+    <div class="hero__aether">
+        <div class="aura-ball aura-ball--1"></div>
+        <div class="aura-ball aura-ball--2"></div>
+        <div class="aura-ball aura-ball--3"></div>
+    </div>
+
+    <!-- Premium Fixed Navigation Header -->
+    <header class="header" id="mainHeader">
+        <div class="header__container">
+            <div class="header__left">
+                <!-- Logo -->
+                <a href="#" class="logo">
+                    <span class="logo__text">Padlock</span>
+                </a>
+
+                <!-- Navigation Links -->
+                <nav class="nav">
+                    <div class="nav__item nav__item--has-dropdown" id="mediaDropdownTrigger">
+                        <a href="#" class="nav__link"> Media
+
+                            <span class="nav__arrow">▼</span>
+                        </a>
+
+                        <!-- Full-width Dropdown Menu -->
+                        <div class="dropdown" id="mediaDropdown">
+                            <div class="dropdown__container">
+                                <!-- Left Panel: Pitch/Overview -->
+                                <div class="dropdown__left">
+                                    <h3 class="dropdown__title">All Your Media</h3>
+                                    <p class="dropdown__info">Keep track of movies, TV shows, anime, books, manga,
+                                        magazines and more in one place.</p>
+                                    <a href="#" class="dropdown__action">
+                                        See overview <span class="dropdown__arrow">→</span>
+                                    </a>
+                                </div>
+
+                                <!-- Right Panel: Navigation Columns -->
+                                <div class="dropdown__right">
+                                    <div class="subnav-column">
+                                        <span class="subnav-label">Watch</span>
+                                        <div class="subnav">
+                                            <a href="#" class="subnav-link">
+                                                <span class="link-title">Movies</span>
+                                                <span class="link-arrow">→</span>
+                                            </a>
+                                            <a href="#" class="subnav-link">
+                                                <span class="link-title">TV Shows</span>
+                                                <span class="link-arrow">→</span>
+                                            </a>
+                                            <a href="#" class="subnav-link">
+                                                <span class="link-title">Anime</span>
+                                                <span class="link-arrow">→</span>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="subnav-column">
+                                        <span class="subnav-label">Reads</span>
+                                        <div class="subnav">
+                                            <a href="#" class="subnav-link">
+
+                                                <span class="link-title">Books</span>
+                                                <span class="link-arrow">→</span>
+                                            </a>
+                                            <a href="#" class="subnav-link">
+
+                                                <span class="link-title">Manga</span>
+                                                <span class="link-arrow">→</span>
+                                            </a>
+                                            <a href="#" class="subnav-link">
+
+                                                <span class="link-title">Magazines</span>
+                                                <span class="link-arrow">→</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="nav__link">Pricing</a>
+                    <a href="#" class="nav__link">About</a>
+                    <a href="#" class="nav__link">Help</a>
+                </nav>
+            </div>
+
+            <!-- Right Controls: Search & Account -->
+            <div class="header__right">
+                <div class="search-bar">
+                    <img src="./images/magnifyingglass.png" alt="Search Icon" class="search-bar__icon">
+                    <input type="text" placeholder="Search..." class="search-bar__input">
+                </div>
+                <a href="./signin.html" class="btn btn--text">Sign in</a>
+                <a href="./register.html" class="btn btn--primary">Register</a>
+            </div>
+        </div>
+
+        <!-- Background Blur Overlay -->
+        <div class="dropdown-overlay" id="dropdownOverlay"></div>
+    </header>
+
+
+    <main class="explore-page">
+
+        <section class="section__entertainment">
+            <h1 class="section__title">Top Movies</h1>
+            <div class="media-row">
+
+                <div class="movie-card">
+                    <img src="./images/jocker.png" alt="F1 Movie" class="movie-card__image">
+                </div>
+
+                <div class="movie-card">
+                    <img src="./images/projecth.png" alt="Project H" class="movie-card__image">
+                </div>
+
+                <div class="movie-card">
+                    <img src="./images/jurasicworldr.png" alt="Jurassic World: Dominion" class="movie-card__image">
+                </div>
+
+                <div class="movie-card">
+                    <img src="./images/houseofdragons.png" alt="Kimetsu no Yaiba" class="movie-card__image">
+                </div>
+            </div>
+        </section>
+
+        <section class="section__entertainment">
+            <h1 class="section__title">Top TV Shows</h1>
+            <div class="media-row">
+
+                <div class="movie-card">
+                    <img src="./images/breakingbad.png" alt="Breaking Bad" class="movie-card__image">
+                </div>
+
+                <div class="movie-card">
+                    <img src="./images/you.png" alt="Kimetsu no Yaiba" class="movie-card__image">
+                </div>
+
+                <div class="movie-card">
+                    <img src="./images/brooklnninenine.png" alt="Kimetsu no Yaiba" class="movie-card__image">
+                </div>
+
+                <div class="movie-card">
+                    <img src="./images/hacks.png" alt="Kimetsu no Yaiba" class="movie-card__image">
+                </div>
+
+
+            </div>
+        </section>
+
+        <section class="section__entertainment">
+            <h1 class="section__title">Top Anime</h1>
+            <div class="media-row">
+                <div class="movie-card">
+                    <img src="./images/kimetsunoyaiba.png" alt="Kimetsu no Yaiba" class="movie-card__image">
+                </div>
+                <div class="movie-card">
+                    <img src="./images/onepunch.png" alt="One Punch Man" class="movie-card__image">
+                </div>
+                <div class="movie-card">
+                    <img src="./images/juju.png" alt="Kimetsu no Yaiba" class="movie-card__image">
+                </div>
+                <div class="movie-card">
+                    <img src="./images/aot.png" alt="Kimetsu no Yaiba" class="movie-card__image">
+                </div>
+            </div>
+        </section>
+
+        <section class="section__entertainment">
+            <h1 class="section__title">Top Books</h1>
+            <div class="media-row">
+
+                <div class="movie-card">
+                    <img src="./images/litlewoman.png" alt="Little Women" class="movie-card__image">
+                </div>
+
+                <div class="movie-card">
+                    <img src="./images/greatgatsby.png" alt="Kimetsu no Yaiba" class="movie-card__image">
+                </div>
+
+                <div class="movie-card">
+                    <img src="./images/fourthwing.png" alt="Kimetsu no Yaiba" class="movie-card__image">
+                </div>
+
+                <div class="movie-card">
+                    <img src="./images/hungergamesbook.png" alt="Kimetsu no Yaiba" class="movie-card__image">
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section__entertainment">
+            <h1 class="section__title">Top Manga</h1>
+            <div class="media-row">
+
+                <div class="movie-card">
+                    <img src="./images/bersekmanga.png" alt="Kimetsu no Yaiba" class="movie-card__image">
+                </div>
+
+                <div class="movie-card">
+                    <img src="./images/jujumanga.png" alt="Kimetsu no Yaiba" class="movie-card__image">
+                </div>
+
+                <div class="movie-card">
+                    <img src="./images/vagabonmanga.png" alt="Kimetsu no Yaiba" class="movie-card__image">
+                </div>
+
+                <div class="movie-card">
+                    <img src="./images/onepicemanga.png" alt="Kimetsu no Yaiba" class="movie-card__image">
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section__entertainment">
+            <h1 class="section__title">Top Magazines</h1>
+            <div class="media-row">
+
+                <div class="movie-card">
+                    <img src="./images/ariannagcosmo.png" alt="Kimetsu no Yaiba" class="movie-card__image">
+                </div>
+
+                <div class="movie-card">
+                    <img src="./images/margotvogue.png" alt="Kimetsu no Yaiba" class="movie-card__image">
+                </div>
+
+                <div class="movie-card">
+                    <img src="./images/chalametvogue.png" alt="Kimetsu no Yaiba" class="movie-card__image">
+                </div>
+
+                <div class="movie-card">
+                    <img src="./images/voguegracea.png" alt="Kimetsu no Yaiba" class="movie-card__image">
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+    <section class="lists-section">
+
+        <h2 class="lists-section__title">Explore Other People's Lists</h2>
+
+        <div class="lists-grid">
+
+            <div class="list-card">
+                <h3 class="list-card__title">Best Movies of 2025</h3>
+                <p class="list-card__description">
+                    Discover the highest-rated movies of the year curated by the community.
+                </p>
+            </div>
+
+            <div class="list-card">
+                <h3 class="list-card__title">Must-Watch Anime</h3>
+                <p class="list-card__description">
+                    Fan-favorite anime series and movies recommended by users.
+                </p>
+            </div>
+
+            <div class="list-card">
+                <h3 class="list-card__title">BookTok Favorites</h3>
+                <p class="list-card__description">
+                    Explore the most talked-about books trending online.
+                </p>
+            </div>
+
+            <div class="list-card">
+                <h3 class="list-card__title">Hidden Gem TV Shows</h3>
+                <p class="list-card__description">
+                    Underrated series worth adding to your watchlist.
+                </p>
+            </div>
+
+            <div class="list-card">
+                <h3 class="list-card__title">Top Manga Collections</h3>
+                <p class="list-card__description">
+                    Community-created manga rankings and recommendations.
+                </p>
+            </div>
+
+            <div class="list-card">
+                <h3 class="list-card__title">Fashion Magazine Covers</h3>
+                <p class="list-card__description">
+                    Iconic magazine editions selected by readers.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+</body>
+
+</html>
