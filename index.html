@@ -1,68 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Padlock</title>
+    <title>Padlock - Your Entertainment Universe</title>
+    <meta name="description"
+        content="Keep track of movies, TV shows, anime, books, manga, magazines and more in one place.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
+    <!-- Background Animated Aether Systems -->
     <div class="hero__aether">
         <div class="aura-ball aura-ball--1"></div>
         <div class="aura-ball aura-ball--2"></div>
         <div class="aura-ball aura-ball--3"></div>
     </div>
-    
-    <header class="navbar">
-        <nav class="navbar__menu">
-            <div class="navbar__left">
-                <span class="navbar__item">Movies</span>
-                <span class="navbar__item">TV shows</span>
-                <span class="navbar__item">Books</span>
-                <span class="navbar__item">Anime</span>
-                <span class="navbar__item">Mangas</span>
-                <span class="navbar__item">Magazines</span>
+
+    <!-- Premium Fixed Navigation Header -->
+    <header class="header" id="mainHeader">
+        <div class="header__container">
+            <div class="header__left">
+                <!-- Logo -->
+                <a href="#" class="logo">
+                    <span class="logo__text">Padlock</span>
+                </a>
+
+                <!-- Navigation Links -->
+                <nav class="nav">
+                    <div class="nav__item nav__item--has-dropdown" id="mediaDropdownTrigger">
+                        <a href="#" class="nav__link">
+                            Media <span class="nav__arrow">▼</span>
+                        </a>
+
+                        <!-- Full-width Dropdown Menu -->
+                        <div class="dropdown" id="mediaDropdown">
+                            <div class="dropdown__container">
+                                <!-- Left Panel: Pitch/Overview -->
+                                <div class="dropdown__left">
+                                    <h3 class="dropdown__title">All Your Media</h3>
+                                    <p class="dropdown__info">Keep track of movies, TV shows, anime, books, manga,
+                                        magazines and more in one place.</p>
+                                    <a href="#" class="dropdown__action">
+                                        See overview <span class="dropdown__arrow">→</span>
+                                    </a>
+                                </div>
+
+                                <!-- Right Panel: Navigation Columns -->
+                                <div class="dropdown__right">
+                                    <div class="subnav-column">
+                                        <span class="subnav-label">Watchlist</span>
+                                        <div class="subnav">
+                                            <a href="#" class="subnav-link">
+                                                <span class="link-title">Movies</span>
+                                                <span class="link-arrow">→</span>
+                                            </a>
+                                            <a href="#" class="subnav-link">
+                                                <span class="link-title">TV Shows</span>
+                                                <span class="link-arrow">→</span>
+                                            </a>
+                                            <a href="#" class="subnav-link">
+                                                <span class="link-title">Anime</span>
+                                                <span class="link-arrow">→</span>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="subnav-column">
+                                        <span class="subnav-label">Readlist</span>
+                                        <div class="subnav">
+                                            <a href="#" class="subnav-link">
+
+                                                <span class="link-title">Books</span>
+                                                <span class="link-arrow">→</span>
+                                            </a>
+                                            <a href="#" class="subnav-link">
+
+                                                <span class="link-title">Manga</span>
+                                                <span class="link-arrow">→</span>
+                                            </a>
+                                            <a href="#" class="subnav-link">
+
+                                                <span class="link-title">Magazines</span>
+                                                <span class="link-arrow">→</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="nav__link">Pricing</a>
+                    <a href="#" class="nav__link">About</a>
+                    <a href="#" class="nav__link">Help</a>
+                </nav>
             </div>
-            <div class="navbar__right">
-                
-                <div class="navbar__search">
-                <img src="./images/magnifyingglass.png" alt="mignefy glass">
-                    <input type="text" placeholder=" Search" class="navbar__search-input">
+
+            <!-- Right Controls: Search & Account -->
+            <div class="header__right">
+                <div class="search-bar">
+                    <img src="./images/magnifyingglass.png" alt="Search Icon" class="search-bar__icon">
+                    <input type="text" placeholder="Search..." class="search-bar__input">
                 </div>
-                <button class="navbar__btn navbar__btn--sign-in">Sign in</button>
-                <button class="navbar__btn navbar__btn--register">Register</button>
+                <a href="./signin.html" class="btn btn--text">Sign in</a>
+                <a href="./register.html" class="btn btn--primary">Register</a>
             </div>
-        </nav>
+        </div>
+
+        <!-- Background Blur Overlay -->
+        <div class="dropdown-overlay" id="dropdownOverlay"></div>
     </header>
-    
 
+    <!-- Main Hero Section -->
+    <section class="hero">
+        <h1 class="hero__title">Your Entertainment<br>Universe.</h1>
+        <p class="hero__subtitle">Keep track of movies, TV shows, anime, books, manga, magazines and more in one place.
+        </p>
 
+        <div class="hero__actions">
+            <a href="./register.html" class="hero__btn hero__btn--primary">Get Started</a>
+            <button class="hero__btn hero__btn--secondary">Explore</button>
+        </div>
+    </section>
 
-
-
-<section class="hero">
-    <h1 class="hero__title">Padlock</h1>
-    <p class="hero__subtitle">Document your favorite entertainments, movie to anime. Its endless!</p>
-</section>
-
-        <section class="cards-section">
+    <!-- Cards Layout Grid -->
+    <section class="cards-section">
         <div class="cards-grid">
             <div class="card">
                 <h3 class="card__title">Trending Entrees</h3>
-                <p class="card__description">The more you fall within a frame for a book like this one you will find you're actually reading it and start to enjoy more about what you're really reading.</p>
+                <p class="card__description">The more you fall within a frame for a book like this one you will find
+                    you're actually reading it and start to enjoy more about what you're really reading.</p>
             </div>
             <div class="card">
                 <h3 class="card__title">Blockbuster shows</h3>
-                <p class="card__description">If a book was one of the worlds most entertaining novels. You can watch it and enjoy what's the book has to offer on the screen from</p>
+                <p class="card__description">If a book was one of the worlds most entertaining novels. You can watch it
+                    and enjoy what's the book has to offer on the screen.</p>
             </div>
             <div class="card">
                 <h3 class="card__title">Top entertainments 2025</h3>
-                <p class="card__description">Make a wish through our schedule. If you are a book planning your watch list to make, but the schedule is filled with other entertainment.</p>
+                <p class="card__description">Make a wish through our schedule. If you are a book planning your watch
+                    list to make, but the schedule is filled with other entertainment.</p>
             </div>
         </div>
     </section>
+
+    <!-- Footer Area -->
+    <footer class="footer">
+        <nav class="footer__nav">
+            <ul class="footer__list">
+                <li><a href="#">About</a></li>
+                <li><a href="#">App</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">© 2025 Padlock</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <!-- Logic Script -->
+    <script src="./script.js" defer></script>
 </body>
+
 </html>
-
-
-

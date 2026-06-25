@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padlock - Create Your Account</title>
+    <meta name="description" content="Join Padlock and keep track of movies, TV shows, anime, books, manga, magazines and more.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./register.css">
+</head>
+
+<body>
+    <!-- Background Animated Aether Systems -->
+    <div class="hero__aether">
+        <div class="aura-ball aura-ball--1"></div>
+        <div class="aura-ball aura-ball--2"></div>
+        <div class="aura-ball aura-ball--3"></div>
+    </div>
+
+    <!-- Premium Fixed Navigation Header -->
+    <header class="header" id="mainHeader">
+        <div class="header__container">
+            <div class="header__left">
+                <!-- Logo -->
+                <a href="./index.html" class="logo">
+                    <span class="logo__text">Padlock</span>
+                </a>
+            </div>
+
+            <!-- Right Controls: Back to Home -->
+            <div class="header__right">
+                <a href="./index.html" class="btn btn--text">Back to Home</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Registration Section -->
+    <main class="register-container">
+        <div class="register-card">
+            <div class="register-card__header">
+                <h1 class="register-card__title">Create Account</h1>
+                <p class="register-card__subtitle">Start your journey into the entertainment universe.</p>
+            </div>
+
+            <form class="register-form" id="registerForm">
+                <!-- Username Input Group -->
+                <div class="input-group">
+                    <label for="username" class="input-group__label">Username</label>
+                    <div class="input-wrapper">
+                        <input type="text" id="username" name="username" class="input-control" placeholder="Enter username" required autocomplete="username">
+                    </div>
+                </div>
+
+                <!-- Email Input Group -->
+                <div class="input-group">
+                    <label for="email" class="input-group__label">Email Address</label>
+                    <div class="input-wrapper">
+                        <input type="email" id="email" name="email" class="input-control" placeholder="you@example.com" required autocomplete="email">
+                    </div>
+                </div>
+
+                <!-- Password Input Group -->
+                <div class="input-group">
+                    <label for="password" class="input-group__label">Password</label>
+                    <div class="input-wrapper">
+                        <input type="password" id="password" name="password" class="input-control" placeholder="••••••••" required autocomplete="new-password">
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn-register">Register</button>
+            </form>
+
+            <div class="register-card__footer">
+                <p>Already have an account? <a href="./signin.html" class="login-link">Sign in</a></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Area -->
+    <footer class="footer">
+        <nav class="footer__nav">
+            <ul class="footer__list">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">© 2025 Padlock</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script src="./script.js" defer></script>
+</body>
+
+</html>
