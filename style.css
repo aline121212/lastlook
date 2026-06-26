@@ -60,18 +60,21 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; 
+
 }
+
 
 body {
     background-color: var(--color-bg-primary);
     background-image: radial-gradient(at 0% 0%, rgba(13, 27, 56, 0.5) 0px, transparent 50%),
-        radial-gradient(at 100% 100%, rgba(9, 18, 41, 0.5) 0px, transparent 50%);
+    radial-gradient(at 100% 100%, rgba(9, 18, 41, 0.5) 0px, transparent 50%);
     color: var(--color-text-white);
     font-family: var(--font-primary);
     min-height: 100vh;
     overflow-x: hidden;
     line-height: 1.6;
+   
 }
 
 a {
@@ -255,6 +258,7 @@ button {
 .btn--primary {
     background: var(--color-blue-primary);
     color: var(--color-text-white);
+    font-weight: 400;
     box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
 }
 
@@ -262,6 +266,83 @@ button {
     transform: translateY(-1px);
     box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
     background: var(--color-blue-hover);
+}
+
+/*  USER icon  */
+.user-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(92, 92, 92, 0.233);
+    width: 39px;
+    height: 39px;
+    border-radius: var(--border-radius-full);
+    overflow: hidden;
+    transition: all var(--transition-fast);
+}
+
+.user-icon:hover {
+    background-color: rgba(92, 92, 92, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+}
+
+/* USER MENU */
+
+.user-menu {
+    position: relative;
+}
+
+
+/* Dropdown */
+
+.user-dropdown { 
+    position: absolute;
+    top: 55px;
+    right: -100px;
+    width: 220px;
+    background-color: var(--color-header-bg-solid);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+    padding: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.25s ease;
+    z-index: 999;
+}
+
+/* Show dropdown on hover */
+
+.user-menu:hover .user-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Links */
+
+.user-dropdown__item {
+    display: block;
+    padding: 12px 14px;
+
+    border-radius: 10px;
+
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+
+    transition: all 0.2s ease;
+}
+
+.user-dropdown__item:hover {
+    background: rgba(245, 20, 20, 0.05);
+    color: orange;
+    padding-left: 18px;
 }
 
 /* ==========================================================================

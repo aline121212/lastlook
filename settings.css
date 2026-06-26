@@ -1,0 +1,110 @@
+.settings-page {
+    min-height: 100vh;
+    padding-top: 70px;
+    padding-bottom: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    z-index: 10;
+}
+
+.settings-panel {
+    width: 500px;
+    max-width: 92%;
+    background-color: var(--color-header-bg-solid);
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 15px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .30);
+    padding: 30px;
+    padding-bottom: 0px;
+    padding-top: 14px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-12px);
+    animation: settingsFade .45s forwards;
+}
+
+@keyframes settingsFade {
+
+    to {
+
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+
+    }
+
+}
+
+.settings-panel__header {
+
+    margin-bottom: 45px;
+
+}
+
+.settings-panel__header h1 {
+    background: linear-gradient(to right, #ffffff, #042052);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--color-header-text);
+    font-weight: 600;
+    margin-bottom: 10px;
+
+}
+
+.settings-panel__header p {
+
+    color: rgba(255, 255, 255, .65);
+    font-size: 16px;
+
+}
+
+.settings-group {
+
+    margin-bottom: 38px;
+
+}
+
+.settings-group h3 {
+    color:rgb(255, 255, 255);
+    font-size: 20px;
+    margin-top: -10px;
+    margin-bottom: 13px;
+    font-weight: 500;
+
+}
+
+.settings-item {
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 22px;
+    margin-bottom: 12px;
+    text-decoration: none;
+    color: white;
+    background: rgba(255, 255, 255, .03);
+    border: 1px solid rgba(255, 255, 255, .05);
+    border-radius: 14px;
+    transition: .35s;
+
+}
+
+.settings-item:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(80, 160, 255, .35);
+    transform: translateX(3px);
+    color: var(--color-blue-hover);
+
+}
+
+.settings-item--danger:hover {
+    border-color: #8d162c;
+    color: #bb304a;
+
+}

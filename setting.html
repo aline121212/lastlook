@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padlock - Settings</title>
+
+<!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./settings.css">
+</head>
+<body>
+    <body>
+     <!-- Background Animated Aether Systems -->
+    <div class="hero__aether">
+        <div class="aura-ball aura-ball--1"></div>
+        <div class="aura-ball aura-ball--2"></div>
+        <div class="aura-ball aura-ball--3"></div>
+    </div>
+
+    <!-- Premium Fixed Navigation Header -->
+    <header class="header" id="mainHeader">
+        <div class="header__container">
+            <div class="header__left">
+                <!-- Logo -->
+                <a href="index.html" class="logo">
+                    <span class="logo__text">Padlock</span>
+                </a>
+
+                <!-- Navigation Links -->
+                <nav class="nav">
+                    <div class="nav__item nav__item--has-dropdown" id="mediaDropdownTrigger">
+                        <a href="#" class="nav__link">
+                            Media <span class="nav__arrow">▼</span>
+                        </a>
+
+                        <!-- Full-width Dropdown Menu -->
+                        <div class="dropdown" id="mediaDropdown">
+                            <div class="dropdown__container">
+                                <!-- Left Panel: Pitch/Overview -->
+                                <div class="dropdown__left">
+                                    <h3 class="dropdown__title">All Your Media</h3>
+                                    <p class="dropdown__info">Keep track of movies, TV shows, anime, books, manga,
+                                        magazines and more in one place.</p>
+                                    <a href="#" class="dropdown__action">
+                                        See overview <span class="dropdown__arrow">→</span>
+                                    </a>
+                                </div>
+
+                                <!-- Right Panel: Navigation Columns -->
+                                <div class="dropdown__right">
+                                    <div class="subnav-column">
+                                        <span class="subnav-label">Watch</span>
+                                        <div class="subnav">
+                                            <a href="#" class="subnav-link">
+                                                <span class="link-title">Movies</span>
+                                                <span class="link-arrow">→</span>
+                                            </a>
+                                            <a href="#" class="subnav-link">
+                                                <span class="link-title">TV Shows</span>
+                                                <span class="link-arrow">→</span>
+                                            </a>
+                                            <a href="#" class="subnav-link">
+                                                <span class="link-title">Anime</span>
+                                                <span class="link-arrow">→</span>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="subnav-column">
+                                        <span class="subnav-label">Reads</span>
+                                        <div class="subnav">
+                                            <a href="#" class="subnav-link">
+
+                                                <span class="link-title">Books</span>
+                                                <span class="link-arrow">→</span>
+                                            </a>
+                                            <a href="#" class="subnav-link">
+
+                                                <span class="link-title">Manga</span>
+                                                <span class="link-arrow">→</span>
+                                            </a>
+                                            <a href="#" class="subnav-link">
+
+                                                <span class="link-title">Magazines</span>
+                                                <span class="link-arrow">→</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="nav__link">Pricing</a>
+                    <a href="#" class="nav__link">About</a>
+                    <a href="#" class="nav__link">Help</a>
+                </nav>
+            </div>
+
+            <!-- Right Controls: Search & Account -->
+            <div class="header__right">
+                <div class="search-bar">
+                    <img src="./images/magnifyingglass.png" alt="Search Icon" class="search-bar__icon">
+                    <input type="text" placeholder="Search..." class="search-bar__input">
+                </div>
+                <a href="./signin.html" class="btn btn--text">Sign in</a>
+                <a href="./register.html" class="btn btn--primary">Register</a>
+                <div class="user-menu">
+
+                    <a href="#" class="user-icon">
+                        <img src="./images/usericon.png" alt="User Icon">
+                    </a>
+
+                    <div class="user-dropdown">
+
+                        <a href="#" class="user-dropdown__item">
+                             Profile
+                        </a>
+
+                        <a href="#" class="user-dropdown__item">
+                             My Lists
+                        </a>
+
+                        <a href="setting.html" class="user-dropdown__item">
+                             Settings
+                        </a>
+
+                        <a href="#" class="user-dropdown__item">
+                             Favorites
+                        </a>
+
+                        <a href="index.html" class="user-dropdown__item">
+                             Sign Out
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Background Blur Overlay -->
+        <div class="dropdown-overlay" id="dropdownOverlay"></div>
+    </header>
+
+    <main class="settings-page">
+
+    <div class="settings-panel">
+
+        <div class="settings-panel__header">
+            <h1>Settings</h1>
+            <p>Manage your Padlock account and preferences.</p>
+        </div>
+
+        <div class="settings-group">
+
+            <h3>Account</h3>
+
+            <a href="#" class="settings-item">
+                <span>Edit Profile</span>
+                <span>→</span>
+            </a>
+
+            <a href="#" class="settings-item">
+                <span>Change Password</span>
+                <span>→</span>
+            </a>
+
+            <a href="#" class="settings-item">
+                <span>Email Address</span>
+                <span>→</span>
+            </a>
+
+        </div>
+
+        <div class="settings-group">
+
+            <h3>Library</h3>
+
+            <a href="#" class="settings-item">
+                <span>My Lists</span>
+                <span>→</span>
+            </a>
+
+            <a href="#" class="settings-item">
+                <span>Favorites</span>
+                <span>→</span>
+            </a>
+
+            <a href="#" class="settings-item">
+                <span>History</span>
+                <span>→</span>
+            </a>
+
+        </div>
+
+        
+
+        <div class="settings-group">
+
+            <h3>Support</h3>
+
+            <a href="#" class="settings-item">
+                <span>Import</span>
+                <span>→</span>
+            </a>
+
+
+            <a href="#" class="settings-item settings-item--danger">
+                <span>Delete Account</span>
+                <span>→</span>
+            </a>
+
+        </div>
+
+    </div>
+
+</main>
+    
+</body>
+</html>
