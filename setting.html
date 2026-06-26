@@ -149,71 +149,113 @@
 
     <main class="settings-page">
 
+    <!-- Left Settings Menu -->
     <div class="settings-panel">
 
         <div class="settings-panel__header">
-            <h1>Settings</h1>
-            <p>Manage your Padlock account and preferences.</p>
+            <h1 class="settings-panel_title">Settings</h1>
+            <p class="settings-panel_desc">Manage your Padlock account and preferences.</p>
         </div>
 
         <div class="settings-group">
 
-            <h3>Account</h3>
+            <h3 class="settings-groupe__title">Account</h3>
+
+            <a href="#" class="settings-item settings-item--active">
+                <span class="settings-item__name">Edit Profile</span>
+              
+            </a> </br>
 
             <a href="#" class="settings-item">
-                <span>Edit Profile</span>
-                <span>→</span>
-            </a>
+                <span class="settings-item__name">Change Password</span>
+            
+            </a> </br>
 
             <a href="#" class="settings-item">
-                <span>Change Password</span>
-                <span>→</span>
+                <span class="settings-item__name">Email Address</span>
+               
             </a>
 
+        </div> 
+
+        <div class="settings-group">
+
+            <h3 class="settings-groupe__title">Library</h3>
+
             <a href="#" class="settings-item">
-                <span>Email Address</span>
-                <span>→</span>
-            </a>
+                <span class="settings-item__name">My Lists</span>
+               
+            </a> </br>
+
+            <a href="#" class="settings-item">
+                <span class="settings-item__name">Favorites</span>
+                
+            </a> </br>
+
+            <a href="#" class="settings-item">
+                <span class="settings-item__name">History</span>
+            </a> 
 
         </div>
 
         <div class="settings-group">
 
-            <h3>Library</h3>
+            <h3 class="settings-groupe__title">Support</h3>
 
             <a href="#" class="settings-item">
-                <span>My Lists</span>
-                <span>→</span>
-            </a>
-
-            <a href="#" class="settings-item">
-                <span>Favorites</span>
-                <span>→</span>
-            </a>
-
-            <a href="#" class="settings-item">
-                <span>History</span>
-                <span>→</span>
-            </a>
-
-        </div>
-
-        
-
-        <div class="settings-group">
-
-            <h3>Support</h3>
-
-            <a href="#" class="settings-item">
-                <span>Import</span>
-                <span>→</span>
-            </a>
-
+                <span class="settings-item__name">Import</span>
+                
+            </a> </div>
 
             <a href="#" class="settings-item settings-item--danger">
-                <span>Delete Account</span>
-                <span>→</span>
+                <span class="settings-item__name">Delete Account</span>
+                 
             </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- Edit Profile Card -->
+
+    <div class="profile-card">
+
+        <h2>Edit Profile</h2>
+
+        <div class="profile-picture">
+
+            <img src="./images/usericon.png" alt="Profile">
+
+            <button>Change Photo</button>
+
+        </div>
+
+        <div class="profile-form">
+
+            <div class="input-group">
+                <label>Name</label>
+                <input type="text" placeholder="John Doe">
+            </div>
+
+            <div class="input-group">
+                <label>Username</label>
+                <input type="text" placeholder="@johndoe">
+            </div>
+
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" placeholder="john@email.com">
+            </div>
+
+            <div class="input-group">
+                <label>Bio</label>
+                <textarea placeholder="Tell everyone a little about yourself..."></textarea>
+            </div>
+
+            <button class="save-btn">
+                Save Changes
+            </button>
 
         </div>
 
