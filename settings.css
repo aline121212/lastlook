@@ -1,7 +1,7 @@
 .settings-page {
     width: 100%;
     min-height: 100vh;
-    padding: 120px 70px 80px;
+    padding: 100px 70px 80px;
     display: flex;
     gap: 45px;
     justify-content: center;
@@ -11,7 +11,7 @@
 /* LEFT CARD */
 
 .settings-panel {
-    width: 300px;
+    width: 260px;
     flex-shrink: 0;
     background: var(--color-header-bg-solid);
     border: 1px solid rgba(255, 255, 255, .08);
@@ -38,91 +38,81 @@
 
 .settings-groupe__title {
     margin-top: 17px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .settings-item__name {
-    padding-top: 10px;
-  
+    display: block;
+    line-height: 10px;
+    width: 140px;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+}
+
+.settings-item__name:hover {
+    background: rgba(245, 20, 20, 0.05);
+    color: rgb(255, 139, 7);
+
+}
+
+.settings-item--danger:hover {
+    color: rgb(253, 104, 104);
 }
 
 /* RIGHT CARD */
 
 .profile-card {
-
-    width: 700px;
+    width: 500px;
     background: var(--color-header-bg-solid);
-
     border: 1px solid rgba(255, 255, 255, .08);
-
-    border-radius: 18px;
-
+    border-radius: 10px;
     padding: 40px;
-
-    box-shadow: 0 20px 40px rgba(0, 0, 0, .30);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .3);
 
 }
 
 .profile-card h2 {
-
+    padding-bottom: 1px;
     color: white;
-
-    font-size: 32px;
-
+    font-weight: 500;
+    font-size: 33px;
     margin-bottom: 35px;
-
 }
 
 /* Profile Image */
 
 .profile-picture {
-
     display: flex;
-
     align-items: center;
-
     gap: 25px;
-
     margin-bottom: 40px;
 
 }
 
 .profile-picture img {
-
-    width: 100px;
-
-    height: 100px;
-
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
-
     object-fit: cover;
-
-    border: 3px solid #ff8b2c;
+    border: 3px solid rgba(59, 131, 246, 0.774);
 
 }
 
 .profile-picture button {
-
     padding: 12px 22px;
-
     border: none;
-
     border-radius: 10px;
-
-    background: #ff8b2c;
-
+    background: rgba(59, 131, 246, 0.774);
     color: white;
-
     cursor: pointer;
-
     font-size: 15px;
-
     transition: .3s;
 
 }
 
 .profile-picture button:hover {
-
+    color: #000;
     background: #ff7310;
 
 }
@@ -198,25 +188,15 @@
 /* SAVE BUTTON */
 
 .save-btn {
-
     margin-top: 10px;
-
     width: 190px;
-
     padding: 14px;
-
     border: none;
-
     border-radius: 12px;
-
-    background: #ff8b2c;
-
+    background: #3e0b4b;
     color: white;
-
     font-size: 16px;
-
     cursor: pointer;
-
     transition: .3s;
 
 }
@@ -230,21 +210,15 @@
 /* ACTIVE MENU ITEM */
 
 .settings-item--active {
-
     color: #ff8b2c;
-
     border-color: #ff8b2c;
-
     background: rgba(255, 140, 44, .08);
 
 }
 
 .settings-item--active:hover {
-
     color: #ff8b2c;
-
     transform: translateX(3px);
-
     border-color: #ff8b2c;
 
 }

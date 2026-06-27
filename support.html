@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Padlock - Settings</title>
-
-<!-- Google Fonts -->
+    <title>Padlock - Create Your Account</title>
+    <meta name="description" content="Join Padlock and keep track of movies, TV shows, anime, books, manga, magazines and more.">
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+    
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./settings.css">
+    <link rel="stylesheet" href="./register.css">
+    <link rel="stylesheet" href="./support.css">
 </head>
+
 <body>
-     <!-- Background Animated Aether Systems -->
+    
+    <!-- Background Animated Aether Systems -->
     <div class="hero__aether">
         <div class="aura-ball aura-ball--1"></div>
         <div class="aura-ball aura-ball--2"></div>
@@ -96,7 +101,7 @@
                     </div>
                     <a href="#" class="nav__link">Pricing</a>
                     <a href="#" class="nav__link">About</a>
-                    <a href="#" class="nav__link">Help</a>
+                    <a href="support.html" class="nav__link">Support</a>
                 </nav>
             </div>
 
@@ -146,95 +151,114 @@
         <div class="dropdown-overlay" id="dropdownOverlay"></div>
     </header>
 
-    <main class="settings-page">
+    <main class="support-container">
 
-    <!-- Left Settings Menu -->
-    <div class="settings-panel">
+    <h1 class="support-title">Need Help?</h1>
 
-        <div class="settings-panel__header">
-            <h1 class="settings-panel_title">Settings</h1>
-            <p class="settings-panel_desc">Manage your Padlock account and preferences.</p>
-        </div>
+    <!-- Contact Card -->
+    <div class="support-card">
 
-        <div class="settings-group">
+        <h2 class="support-card__title">Contact us</h2>
 
-            <h3 class="settings-groupe__title">Account</h3>
+        <p class="support-card__text">
+            Contatct us if you have any questions or want to share some feedback?
+        </p>
 
-            <a href="#" class="settings-item settings-item--active">
-                <span class="settings-item__name">Edit Profile</span>
-              
-            </a> </br>
-
-            <a href="changepassword.html" class="settings-item">
-                <span class="settings-item__name">Change Password</span>
-            
-            </a> </br>
-
-            <a href="#" class="settings-item">
-                <span class="settings-item__name">Email Address</span>
-               
-            </a> </br>
-
-            <a href="import-settings.html" class="settings-item">
-                <span class="settings-item__name">Import</span>
-                
-            </a> </div> </br>
-
-            <a href="#" class="settings-item settings-item--danger">
-                <span class="settings-item__danger">Delete Account</span>
-                 
-            </a>
-
-        </div> 
+        <a href="mailto:padlock@gmail.com" class="btn-register">
+            padlock@gmail.com
+        </a>
 
     </div>
 
+    <!-- FAQ Card -->
+    <div class="faq-card">
 
-    <!-- Edit Profile Card -->
+    <h2 class="faq-card__title">
+        Frequently Asked Questions
+    </h2>
 
-    <div class="profile-card">
+    <div class="faq-item">
 
-        <h2>Edit Profile</h2>
+        <button class="faq-question">
+            <span>How do I create a list?</span>
+            <span class="faq-icon">+</span>
+        </button>
 
-        <div class="profile-picture">
-
-            <img src="./images/usericon.png" alt="Profile">
-
-            <button>Change Photo</button>
-
-        </div>
-
-        <div class="profile-form">
-
-            <div class="input-group">
-                <label>Name</label>
-                <input type="text" placeholder="name">
-            </div>
-
-            <div class="input-group">
-                <label>Username</label>
-                <input type="text" placeholder="@username">
-            </div>
-
-            <div class="input-group">
-                <label>Email</label>
-                <input type="email" placeholder="you@email.com">
-            </div>
-
-            <div class="input-group">
-                <label>Bio</label>
-                <textarea placeholder="Tell everyone a little about yourself..."></textarea>
-            </div>
-
-            <button class="save-btn">
-                Save Changes
-            </button>
-
+        <div class="faq-answer">
+            <p>
+                Go to your profile and click the "Create List" button.
+                Give your list a name, choose a category, and start adding
+                your favorite media.
+            </p>
         </div>
 
     </div>
 
+    <div class="faq-item">
+
+        <button class="faq-question">
+            <span>How do I change my profile picture?</span>
+            <span class="faq-icon">+</span>
+        </button>
+
+        <div class="faq-answer">
+            <p>
+                Visit your profile settings and select "Edit Profile."
+                Click on your current profile picture to upload a new one.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+            <span>Is Padlock free?</span>
+            <span class="faq-icon">+</span>
+        </button>
+
+        <div class="faq-answer">
+            <p>
+                Yes! Padlock is free to use. Premium features may become
+                available in the future.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+            <span>What types of media can I track?</span>
+            <span class="faq-icon">+</span>
+        </button>
+
+        <div class="faq-answer">
+            <p>
+                You can track movies, TV shows, anime, books, manga,
+                magazines, comics, podcasts, games and much more.
+            </p>
+        </div>
+
+    </div>
+
+</div>
 </main>
-    
+
+    <!-- Footer Area -->
+    <footer class="footer">
+        <nav class="footer__nav">
+            <ul class="footer__list">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">© 2025 Padlock</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+   <script src="support.js"></script>
 </body>
+
 </html>

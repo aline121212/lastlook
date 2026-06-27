@@ -256,3 +256,5 @@ prevBtn.addEventListener("click", () => {
         track.style.transform = `translateX(-${currentPosition}px)`;
     }
 });
+
+

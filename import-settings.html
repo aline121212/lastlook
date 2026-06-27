@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Padlock - Settings</title>
+    <title>Padlock - Change password</title>
 
 <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,6 +12,7 @@
 
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./settings.css">
+    <link rel="stylesheet" href="./import-settings.css">
 </head>
 <body>
      <!-- Background Animated Aether Systems -->
@@ -96,7 +97,7 @@
                     </div>
                     <a href="#" class="nav__link">Pricing</a>
                     <a href="#" class="nav__link">About</a>
-                    <a href="#" class="nav__link">Help</a>
+                    <a href="#" class="nav__link">Support</a>
                 </nav>
             </div>
 
@@ -160,7 +161,7 @@
 
             <h3 class="settings-groupe__title">Account</h3>
 
-            <a href="#" class="settings-item settings-item--active">
+            <a href="setting.html" class="settings-item">
                 <span class="settings-item__name">Edit Profile</span>
               
             </a> </br>
@@ -175,7 +176,7 @@
                
             </a> </br>
 
-            <a href="import-settings.html" class="settings-item">
+            <a href="#" class="settings-item settings-item--active">
                 <span class="settings-item__name">Import</span>
                 
             </a> </div> </br>
@@ -190,40 +191,18 @@
     </div>
 
 
-    <!-- Edit Profile Card -->
+    <!-- Password Card -->
 
     <div class="profile-card">
 
-        <h2>Edit Profile</h2>
-
-        <div class="profile-picture">
-
-            <img src="./images/usericon.png" alt="Profile">
-
-            <button>Change Photo</button>
-
-        </div>
+        <h2>Change Password</h2>
+        <p class="settings-password_desc">Manage your Padlock account and preferences.</p>
 
         <div class="profile-form">
 
             <div class="input-group">
-                <label>Name</label>
-                <input type="text" placeholder="name">
-            </div>
-
-            <div class="input-group">
-                <label>Username</label>
-                <input type="text" placeholder="@username">
-            </div>
-
-            <div class="input-group">
-                <label>Email</label>
-                <input type="email" placeholder="you@email.com">
-            </div>
-
-            <div class="input-group">
-                <label>Bio</label>
-                <textarea placeholder="Tell everyone a little about yourself..."></textarea>
+                <label>Import Data</label>
+                <input type="text" placeholder="">
             </div>
 
             <button class="save-btn">
