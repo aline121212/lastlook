@@ -1,0 +1,190 @@
+body{
+    
+    background-color: black;
+    background:
+    linear-gradient(to right,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0,0,0,.35) 22%,
+    rgb(0, 0, 0), 0.05) 50%,
+    rgba(0,0,0,.35) 78%,
+    rgba(0,0,0,.85) 100%),
+
+    linear-gradient(to bottom,
+    var(--color-bg-primary) 100%);
+}
+
+
+/* ===========================
+   MOVIE HERO
+=========================== */
+
+.movie-hero{
+    position:relative;
+    margin-top:70px;
+    height:40vh;
+    overflow:hidden;
+
+}
+
+.movie-hero__bg{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+}
+
+/* Dark fade on left/right */
+
+.movie-hero__overlay{
+    position:absolute;
+    inset:0;
+    background:
+    linear-gradient(to right,
+    rgba(0,0,0,.85) 0%,
+    rgba(0,0,0,.35) 22%,
+    rgba(0,0,0,.05) 50%,
+    rgba(0,0,0,.35) 78%,
+    rgba(0,0,0,.85) 100%),
+
+    linear-gradient(to bottom,
+    transparent 45%,
+    var(--color-bg-primary) 100%);
+
+}
+
+/* ===========================
+   INFORMATION
+=========================== */
+
+.movie-info{
+    
+    max-width:1250px;
+    margin:auto;
+    margin-top:-90px;
+    position:relative;
+    z-index:5;
+    display:flex;
+    justify-content:space-between;
+    gap:70px;
+    align-items:flex-end;
+    padding:0 40px 90px;
+
+}
+
+.movie-info__left{
+    flex:1;
+
+}
+
+.movie-title{
+    font-size:58px;
+    font-weight:600;
+    line-height:1;
+    padding-bottom: 100px;
+    margin-bottom: 0px;
+    background:linear-gradient(
+    135deg,
+    white,
+    #b8c5ff);
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+}
+
+.movie-short{
+
+    color:#b4bcc9;
+    font-size:18px;
+    max-width:700px;
+    padding-bottom: 10px;
+    margin-bottom:28px;
+
+}
+
+.movie-meta{
+    display:flex;
+    gap:16px;
+    flex-wrap:wrap;
+
+}
+
+.movie-meta span{
+
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    padding:10px 18px;
+    border-radius:13px;
+    color:white;
+    backdrop-filter:blur(15px);
+
+}
+
+/* ===========================
+   POSTER
+=========================== */
+
+.movie-poster{
+    width:300px;
+    border-radius:14px;
+    box-shadow:
+    0 30px 60px rgba(0,0,0,.45);
+    transition:.35s;
+
+}
+
+.movie-poster:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 40px 70px rgba(0,0,0,.6);
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:900px){
+
+.movie-info{
+
+flex-direction:column-reverse;
+
+align-items:center;
+
+text-align:center;
+
+margin-top:-50px;
+
+}
+
+.movie-short{
+
+margin:auto;
+
+margin-bottom:25px;
+
+}
+
+.movie-meta{
+
+justify-content:center;
+
+}
+
+.movie-title{
+
+font-size:42px;
+
+}
+
+.movie-poster{
+
+width:240px;
+
+}
+
+}
